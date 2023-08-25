@@ -1,0 +1,14 @@
+---
+title: "A Multi Perspective Access Control in a Smart Home"
+collection: publications
+permalink: /publication/codaspy-smart
+# excerpt: 'This paper is about the number 2. The number 3 is left for future work.'
+date: 'April 2021'
+venue: 'CODASPY '21'
+paperurl: 'http://shrave.github.io/files/paper2.pdf'
+citation: 'Kanchi, Shravya, and Kamalakar Karlapalem. "A multi perspective access control in a smart home." Proceedings of the Eleventh ACM Conference on Data and Application Security and Privacy. 2021.'
+---
+
+[Download paper here](http://shrave.github.io/files/paper2.pdf)
+
+Recommended citation: Kanchi, Shravya, and Kamalakar Karlapalem. "A multi perspective access control in a smart home." Proceedings of the Eleventh ACM Conference on Data and Application Security and Privacy. 2021.
