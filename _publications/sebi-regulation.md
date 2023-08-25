@@ -1,5 +1,5 @@
 ---
-title: "SEBI Regulation Biography."
+title: "SEBI Regulation Biography"
 collection: publications
 permalink: /publication/sebi-regulation
 date: 'April 2022'
