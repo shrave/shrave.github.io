@@ -54,6 +54,6 @@ Publications
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
    -->
-Service and leadership
+<!-- Service and leadership
 ======
-* President of Mantra Meditation Club at Virginia Tech. 
+* President of Mantra Meditation Club at Virginia Tech.  -->
