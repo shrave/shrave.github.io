@@ -3,7 +3,7 @@ title: "SEBI Regulation Biography"
 collection: publications
 permalink: /publication/sebi-regulation
 date: 'April 2022'
-venue: 'The Web Conference'
+venue: 'Companion Proceedings of the Web Conference'
 paperurl: 'http://shrave.github.io/files/sebi_reg.pdf'
 citation: 'Buggana, Sathvik Sanjeev, Deepti Saravanan, Shravya Kanchi, Ujwal Narayan, Shivam Mangale, Lini T. Thomas, Kamalakar Karlapalem, and Natraj Raman. "SEBI Regulation Biography." In Companion Proceedings of the Web Conference 2022, pp. 598-603. 2022.'
 ---
