@@ -4,7 +4,7 @@ collection: publications
 permalink: /publication/sifat-deepfake
 date: 'May 2024'
 venue: 'IEEE Symposium on Security and Privacy (SP)'
-paperurl: 'http://shrave.github.io/files/sifat-deepfake.pdf'
+paperurl: 'http://shrave.github.io/files/deepfake-analysis.pdf'
 citation: 'Abdullah, Sifat Muhammad, et al. "An Analysis of Recent Advances in Deepfake Image Detection in an Evolving Threat Landscape." 2024 IEEE Symposium on Security and Privacy (SP). IEEE Computer Society, 2024.'
 ---
 
