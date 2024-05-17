@@ -42,6 +42,15 @@ Publications
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
   
+Achievements
+======
+* Got awarded the IEEE S&P Student Travel Grant 2024.
+* Media Coverage: Got featured in VPM News Focal Point: Artificial intelligence: What are the risks and benefits?
+* Presented a poster on “First Look at Toxicity Injection Attacks on Open-domain Chatbots.” at DMV Security Workshop 2024.
+* Presented on “Using GenAI to strengthen security defenses” at VT Fall 2023 Skillshop Series - Leveraging Creative Technologies.
+* Qualified for and completed CopyrightX, a course on US Copyright Law, conducted each year jointly by the Harvard Law School & Berkman Klein Center for Internet and Society.
+* Dean’s list of Monsoon 2014 and Spring 2015 semesters at IIIT Sricity.
+
 <!-- Talks
 ======
   <ul>{% for post in site.talks %}
