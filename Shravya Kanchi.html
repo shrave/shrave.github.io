@@ -8,10 +8,17 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
     <style>
       body {
         position: relative;
        background-color: #ffffff;
+       font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+       font-size: 16px;
+       line-height: 1.65;
+       letter-spacing: 0.01em;
+       font-weight: 400;
+       color: #111827;
             /* background: url('background.gif')  center center fixed ; /* Set the GIF as the background  */
             background-size: cover;
 
@@ -129,6 +136,144 @@
     .navbar-custom {
       background-color: #000000;
     }
+    .navbar-custom .nav > li > a {
+      padding: 16px 18px;
+      font-weight: 500;
+    }
+    .navbar-custom .nav > li.active > a,
+    .navbar-custom .nav > li > a:focus,
+    .navbar-custom .nav > li > a:hover {
+      font-weight: 600;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
+    .panel-info {
+      border: 1px solid rgba(0, 0, 0, 0.06);
+      border-radius: 10px;
+      box-shadow: 0 1px 6px rgba(0, 0, 0, 0.06);
+      margin-bottom: 28px;
+    }
+
+    body, h1, h2, h3, h4, h5, h6, p, a, li {
+      color: #111827;
+    }
+
+    .section-title {
+      font-size: 28px;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.4rem;
+    }
+
+    h4 {
+      font-size: 20px;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      margin-top: 2.2rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .project-title {
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      margin-top: 2rem;
+      margin-bottom: 0.6rem;
+    }
+    .project-title:first-of-type {
+      margin-top: 0.3rem;
+    }
+
+    .project-label {
+      font-weight: 600;
+    }
+
+    ul li {
+      font-size: 16px;
+      font-weight: 400;
+      letter-spacing: 0.01em;
+      margin-bottom: 0.45rem;
+    }
+
+    .meta {
+      font-size: 14px;
+      color: #6b7280;
+      letter-spacing: 0.01em;
+    }
+
+    .section-spacing {
+      margin-bottom: 34px;
+    }
+
+    .panel-body {
+      padding: 22px 26px;
+    }
+
+    .intro-lead h4 {
+      font-size: 20px;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+    }
+
+    .intro-lead p {
+      font-size: 18px;
+      letter-spacing: 0.01em;
+    }
+
+    .intro-lead p:first-of-type {
+      font-size: 20px;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+    }
+
+    .project-block {
+      margin-top: 18px;
+      padding-top: 8px;
+      border-top: 1px dashed rgba(0, 0, 0, 0.08);
+    }
+
+    .project {
+      margin-bottom: 2.6rem;
+    }
+
+    .project-line {
+      margin-bottom: 0.35rem;
+    }
+
+    h4 + p,
+    h4 + ul {
+      margin-top: 0.6rem;
+    }
+
+    #section1 em,
+    #section2 em,
+    #section3 em,
+    #section4 em,
+    #section5 em,
+    #section6 em {
+      color: #6b7280;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      letter-spacing: 0.01em;
+    }
+
+    @media (max-width: 991px) {
+      .col-sm-3,
+      .col-sm-9 {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+      }
+
+      .panel-body {
+        padding: 18px 18px;
+      }
+
+      #profile {
+        padding-top: 20px;
+      }
+    }
     </style>
   </head>
   <body data-spy="scroll" data-target=".myNavbar" data-offset="50">
@@ -148,28 +293,22 @@
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav navbar-right">
             <li class="active">
-              <a href="./Resume.pdf">Resume</a>
-            </li>
-            <li class="active">
-              <a href="#section0">About Me</a>
-            </li>
-            <li class="active">
-              <a href="#section1">News</a>
-            </li>
-            <li class="active">
-              <a href="#section2">Publications</a>
+              <a href="#about">About</a>
             </li>
             <li>
-              <a href="#section3">Education</a>
+              <a href="#updates">Updates</a>
             </li>
-            <li class="active">
-              <a href="#section4">Achievements</a>
+            <li>
+              <a href="#research">Research</a>
             </li>
-            <li class="active">
-              <a href="#section5">Skills</a>
+            <li>
+              <a href="#publications">Publications</a>
             </li>
-            <li class="active">
-              <a href="#section6">Work Experience</a>
+            <li>
+              <a href="./Resume.pdf" target="_blank">CV</a>
+            </li>
+            <li>
+              <a href="#contact">Contact</a>
             </li>
 <!--             <li class="active">
               <a href="#section7">Videos</a>
@@ -210,24 +349,29 @@
       </div>
       <div class="col-sm-9" style="padding-top: 20px; padding-right: 100px; padding-left: 0px;">
         <div id="section0" class="container-fluid">
+          <div id="about"></div>
           <!-- <h3 style="color: #ffffff;"> Welcome</h3> -->
-          <div class="panel panel-info" style="margin-right:20px ; text-align: justify;">
-            <div class="panel-body">
+          <div class="panel panel-info" style="margin-right:20px; text-align: left;">
+            <div class="panel-body intro-lead">
               <p>
 
-                <p>Hey!</p>
-                <p>I am Shravya, PhD candidate at Virginia Tech, Blacksburg. I am being advised by <a href="https://people.cs.vt.edu/vbimal/">Dr. Bimal Viswanath</a>. My research interests lie in using generative AI for the good of cybersecurity.</p>
-                
-                <p>I have experience in using generative models (like LLMs, GANs, Diffusion, etc.) for tabular data generation specific to security tasks. I also have used generative models for the creation of synthetic conversational data infused with desirable traits like empathy, politeness, etc. to mitigate toxicity in chatbot customization pipelines.</p>
-                
-                <p>In my master's thesis, I designed a multi-purpose access control system to manage smart home devices. I was advised by <a href="https://faculty.iiit.ac.in/~kamal/">Dr. Kamal Karlapalem</a>. In my Bachelor's honors project, I designed an ML-based malicious short URL detector.</p>
+                <h4>AI Security &amp; Generative AI Researcher</h4>
+                <p>PhD researcher in AI security and generative AI at Virginia Tech, focused on LLM safety, synthetic data, and adversarial ML. I build evaluation-driven systems that improve security outcomes in real-world settings, with publications at IEEE S&amp;P, Asia CCS, and ACSAC.</p>
+
+                <h4>Quick Metrics</h4>
+                <ul>
+                  <li>+20% improvement via synthetic data augmentation</li>
+                  <li>Publications: IEEE S&amp;P, Asia CCS, ACSAC</li>
+                  <li>OpenAI Cybersecurity Grant: agent-based security automation</li>
+                </ul>
                 
                 <h5>I plan to spend Summer 2025 working on impactful research at the intersection of Security and Generative AI. If you have relevant opportunities, please reach out to me on LinkedIn or via email.</h5>
             </div>
           </div>
         </div>
-        <div id="section1" class="container-fluid">
-          <h3 style="color: #ffffff;"><i class="fas fa-newspaper"></i> Latest News</h3>
+        <div id="section1" class="container-fluid section-spacing">
+          <div id="updates"></div>
+          <h3 class="section-title"><i class="fas fa-newspaper"></i> Latest News</h3>
           <div class="panel panel-info" style="margin-right:20px">
             <div class="panel-body">
               <div class="row">
@@ -248,8 +392,45 @@
             </div>
           </div>
         </div>
-        <div id="section2" class="container-fluid">
-          <h3 style="color: #ffffff;"><i class="fa-solid fa-book"></i> Publications</h3>
+        <div id="research" class="container-fluid section-spacing">
+          <h3 class="section-title">Research</h3>
+          <div class="panel panel-info" style="margin-right:20px">
+            <div class="panel-body">
+              <h4>Research Themes</h4>
+              <ul>
+                <li>Synthetic data pipelines for robust security ML under data scarcity or sensitivity.</li>
+                <li>LLM safety and toxicity mitigation for real-world conversational deployments.</li>
+                <li>Automated and adversarial security testing frameworks for evolving software and ML threats.</li>
+                <li>Evaluation pipelines emphasizing measurable security outcomes at deployment scale.</li>
+              </ul>
+              <h4>Selected Projects</h4>
+              <div class="project-block project">
+                <h5 class="project-title">Improving Security ML Under Data Scarcity Using Generative AI</h5>
+                <p class="project-line"><span class="project-label">Problem:</span> Security ML classifiers are often limited by data scarcity and imbalance, rather than algorithmic design.</p>
+                <p class="project-line"><span class="project-label">Approach:</span> Applied <strong>Generative AI-based synthetic data augmentation</strong> to improve classifier generalization. Evaluated multiple state-of-the-art GenAI methods and introduced Nimai, a controlled synthetic data generation scheme for security tasks.</p>
+                <p class="project-line"><span class="project-label">Evaluation:</span> Conducted empirical evaluation across 7 diverse security tasks, including severely low-data settings.</p>
+                <p class="project-line"><span class="project-label">Outcome:</span> Achieved up to 32.6% performance improvement in security classifiers.</p>
+              </div>
+              <div class="project-block project">
+                <h5 class="project-title">Reducing Toxicity in LLM Fine-tuning Pipelines</h5>
+                <p class="project-line"><span class="project-label">Problem:</span> Fine-tuning LLMs on untrusted conversational data can introduce toxic or unsafe behavior.</p>
+                <p class="project-line"><span class="project-label">Approach:</span> Developed TuneShield, a defense framework for safe fine-tuning of <strong>LLaMA-based chat models</strong>, combining LLM-based toxicity detection, targeted synthetic data generation ("healing data"), and <strong>alignment using PEFT-based Direct Preference Optimization (DPO)</strong>.</p>
+                <p class="project-line"><span class="project-label">Evaluation:</span> Evaluated against toxicity injection, adaptive adversarial, and jailbreak attacks during conversational fine-tuning.</p>
+                <p class="project-line"><span class="project-label">Outcome:</span> Reduced toxic outputs to near-zero levels while preserving conversational quality.</p>
+              </div>
+              <div class="project-block project">
+                <h5 class="project-title">Agent-based Automation for Security Test Generation</h5>
+                <p class="project-line"><span class="project-label">Problem:</span> Manual vulnerability testing for third-party libraries does not scale for software supply-chain security.</p>
+                <p class="project-line"><span class="project-label">Approach:</span> Built a <strong>self-correcting multi-agent LLM system</strong> for automated JUnit security test generation and execution.</p>
+                <p class="project-line"><span class="project-label">Evaluation:</span> Evaluated across 50 Java client codebases, using LLM-based validation to determine whether generated tests successfully trigger known vulnerabilities.</p>
+                <p class="project-line"><span class="project-label">Outcome:</span> Achieved automated end-to-end vulnerability test generation and validation using self-correcting LLM agents.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="section2" class="container-fluid section-spacing">
+          <div id="publications"></div>
+          <h3 class="section-title"><i class="fa-solid fa-book"></i> Publications</h3>
           <div class="panel panel-info" style="margin-right:20px">
             <div class="panel-body">
               <div class="row">
@@ -349,8 +530,17 @@
             </div>
           </div>
         </div>
-        <div id="section3" class="container-fluid">
-          <h3 style="color: #ffffff;"><i class="fa-solid fa-user-graduate"></i> Education</h3>
+        <div id="background" class="container-fluid section-spacing">
+          <h3 class="section-title">Background</h3>
+          <div class="panel panel-info" style="margin-right:20px">
+            <div class="panel-body">
+              <p>In my master's thesis, I designed a multi-purpose access control system to manage smart home devices. I was advised by <a href="https://faculty.iiit.ac.in/~kamal/">Dr. Kamal Karlapalem</a>.</p>
+              <p>In my Bachelor's honors project, I designed an ML-based malicious short URL detector.</p>
+            </div>
+          </div>
+        </div>
+        <div id="section3" class="container-fluid section-spacing">
+          <h3 class="section-title"><i class="fa-solid fa-user-graduate"></i> Education</h3>
           <div class="panel panel-info" style="margin-right:20px">
             <div class="panel-body">
               <!-- Section: Timeline -->
@@ -387,8 +577,8 @@
             </div>
           </div>
         </div>
-        <div id="section4" class="container-fluid">
-          <h3 style="color: #ffffff;"><i class="fa-solid fa-trophy"></i> Achievements</h3>
+        <div id="section4" class="container-fluid section-spacing">
+          <h3 class="section-title"><i class="fa-solid fa-trophy"></i> Achievements</h3>
           <div class="panel panel-info" style="margin-right:20px">
             <div class="panel-body">
               <div class="row">
@@ -414,8 +604,8 @@
             </div>
           </div>
         </div>
-        <div id="section5" class="container-fluid">
-          <h3 style="color: #ffffff;"><i class="fa fa-cogs" aria-hidden="true"></i>
+        <div id="section5" class="container-fluid section-spacing">
+          <h3 class="section-title"><i class="fa fa-cogs" aria-hidden="true"></i>
  Skills</h3>
           <div class="panel panel-info" style="margin-right:20px">
             <div class="panel-body">
@@ -449,8 +639,8 @@
             </div>
           </div>
         </div>
-        <div id="section6" class="container-fluid">
-          <h3 style="color: #ffffff;"><i class="fa-solid fa-building"></i> Work Experience</h3>
+        <div id="section6" class="container-fluid section-spacing">
+          <h3 class="section-title"><i class="fa-solid fa-building"></i> Work Experience</h3>
           <div class="panel panel-info" style="margin-right:20px; text-align: justify;">
             <div class="panel-body">
               <!-- Section: Timeline -->
@@ -502,6 +692,15 @@
                 </ul>
               </section>
               <!-- Section: Timeline -->
+            </div>
+          </div>
+        </div>
+        <div id="contact" class="container-fluid section-spacing">
+          <h3 class="section-title">Contact</h3>
+          <div class="panel panel-info" style="margin-right:20px">
+            <div class="panel-body">
+              <p>Email: <a href="mailto: shravya@vt.edu">shravya@vt.edu</a></p>
+              <p>LinkedIn: <a href="https://www.linkedin.com/in/shravya-kanchi/" target="_blank">linkedin.com/in/shravya-kanchi</a></p>
             </div>
           </div>
         </div>

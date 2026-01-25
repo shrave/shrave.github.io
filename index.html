@@ -9,17 +9,17 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
     <style>
       body {
         position: relative;
         background-color: #f2e4d6;
-            /* background: url('./rain-icegif-8.gif')  center center ;  */
-            /* background-size: cover; */
-            /* font-family: Arial, sans-serif; */
-            /* font-family: 'Roboto', sans-serif; */
-            font-size: 15px; /* Base font size */
-
-        */
+        font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+        font-size: 16px;
+        line-height: 1.65;
+        letter-spacing: 0.01em;
+        font-weight: 400;
+        color: #111827;
       }
 
       .timeline {
@@ -82,7 +82,10 @@
         gap: 16px;
       }
       .panel-info {
-        border-color: #ee5260;
+        border: 1px solid rgba(0, 0, 0, 0.06);
+        border-radius: 10px;
+        box-shadow: 0 1px 6px rgba(0, 0, 0, 0.06);
+        margin-bottom: 28px;
       }
 
       .video-grid-item {
@@ -136,6 +139,17 @@
     .navbar-custom {
       background-color: #f2e4d6;
     }
+    .navbar-custom .nav > li > a {
+      padding: 16px 18px;
+      font-weight: 500;
+    }
+    .navbar-custom .nav > li.active > a,
+    .navbar-custom .nav > li > a:focus,
+    .navbar-custom .nav > li > a:hover {
+      font-weight: 600;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
 
     .well {
       background-color: #fff7ef;
@@ -144,7 +158,156 @@
     }
 
     body, h1, h2, h3, h4, h5, h6, p, a, li {
-      color: #2b2420;
+      color: #111827;
+    }
+
+    .section-title {
+      font-size: 28px;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.4rem;
+      color: #2E4057;
+    }
+
+    h4 {
+      font-size: 20px;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      margin-top: 2.2rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .project-title {
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      margin-top: 2rem;
+      margin-bottom: 0.6rem;
+    }
+    .project-title:first-of-type {
+      margin-top: 0.3rem;
+    }
+
+    .project-label {
+      font-weight: 600;
+    }
+
+    ul li {
+      font-size: 16px;
+      font-weight: 400;
+      letter-spacing: 0.01em;
+      margin-bottom: 0.45rem;
+    }
+
+    .meta {
+      font-size: 14px;
+      color: #6b7280;
+      letter-spacing: 0.01em;
+    }
+
+    .section-spacing {
+      margin-bottom: 34px;
+    }
+
+    .panel-body {
+      padding: 22px 26px;
+    }
+
+    .intro-lead h4 {
+      font-size: 20px;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+    }
+
+    .intro-lead p {
+      font-size: 18px;
+      letter-spacing: 0.01em;
+    }
+    .intro-lead p {
+      letter-spacing: 0.005em;
+    }
+
+    .project-block {
+      margin-top: 18px;
+      padding-top: 8px;
+      border-top: 1px dashed rgba(0, 0, 0, 0.08);
+    }
+
+    .project {
+      margin-bottom: 2.6rem;
+    }
+
+    .project-line {
+      margin-bottom: 0.35rem;
+    }
+
+    h4 + p,
+    h4 + ul {
+      margin-top: 0.6rem;
+    }
+
+    .education-item {
+      margin-bottom: 20px;
+    }
+
+    .edu-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .edu-degree {
+      font-weight: 600;
+    }
+
+    .edu-years,
+    .edu-cgpa {
+      color: #6b7280;
+      font-size: 14px;
+      letter-spacing: 0.01em;
+    }
+
+    .edu-cgpa {
+      margin-top: 4px;
+      font-size: 16px;
+    }
+
+    .skills-title {
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      margin-top: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    #section1 em,
+    #section2 em,
+    #section3 em,
+    #section4 em,
+    #section5 em,
+    #section6 em {
+      color: #6b7280;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      letter-spacing: 0.01em;
+    }
+
+    @media (max-width: 991px) {
+      .col-sm-3,
+      .col-sm-9 {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+      }
+
+      .panel-body {
+        padding: 18px 18px;
+      }
+
+      #profile {
+        padding-top: 20px;
+      }
     }
     </style>
   </head>
@@ -164,35 +327,21 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav navbar-right">
-            <!-- <li class="active">
-              <a href="./Resume.pdf">Resume</a>
-            </li> -->
             <li class="active">
-              <a href="#section0">About Me</a>
+              <a href="#about">About</a>
             </li>
-            <li class="active">
-              <a href="#section1">Updates</a>
+            <li>
+              <a href="#research">Research</a>
             </li>
-            <li class="active">
-              <a href="#section2">Publications</a>
+            <li>
+              <a href="#publications">Publications</a>
             </li>
-            <li class="active">
-              <a href="#section3">Education</a>
-            </li>
-            <li class="active">
-              <a href="#section4">Certifications</a>
-            </li>
-            <li class="active">
+            <li>
               <a href="#section6">Experience</a>
             </li>
-            <li class="active">
-              <a href="#section5">Skills</a>
-            </li>
-
-<!--             <li class="active">
-              <a href="#section7">Videos</a>
-            </li> -->
-          </ul>
+            <li>
+              <a href="./Resume_SK_2026.pdf" target="_blank">Resume</a>
+            </li></ul>
         </div>
       </div>
     </nav>
@@ -223,7 +372,7 @@
               <i class="fab fa-linkedin"></i></i> LinkedIn </a>
           </h4>
           <h4 style="margin:10px;padding-left: 20px;padding-right: 10px;">
-            <a href="./Resume.pdf" target="_blank">
+            <a href="./Resume_SK_2026.pdf" target="_blank">
               <i class="fas fa-file-alt"></i> Resume </a>
           </h4>
         </div>
@@ -231,24 +380,23 @@
       </div>
       <div class="col-sm-9" style="padding-top: 0px; padding-right: 100px; padding-left: 0px;">
         <div id="section0" class="container-fluid">
+          <div id="about"></div>
           <!-- <h3 style="color: #ffffff;"> Welcome</h3> -->
-          <div class="" style="margin-right:20px ; text-align: justify;">
-            <div class="panel-body">
+          <div class="" style="margin-right:20px; text-align: left;">
+            <div class="panel-body intro-lead">
               <p>
 
-                <h4>Hey!</h4>
-                <p>I am Shravya, PhD candidate at Virginia Tech, Blacksburg. I am being advised by <a href="https://people.cs.vt.edu/~danfeng/">Dr. Daphne Yao</a>. My research interests lie in using generative AI for the good of cybersecurity.</p>
-                
-                <p>I have experience in using generative models (like LLMs, GANs, Diffusion, etc.) for tabular data generation specific to security tasks. I also have used generative models for the creation of synthetic conversational data infused with desirable traits like empathy, politeness, etc. to mitigate toxicity in chatbot customization pipelines.</p>
-                
-                <p>As part of my master's thesis, I designed a multi-purpose access control system to manage smart home devices. I was advised by <a href="https://faculty.iiit.ac.in/~kamal/">Dr. Kamal Karlapalem</a>. In my Bachelor's honors project, I designed an ML-based malicious short URL detector.</p>
-                
+                <h4>AI Security Researcher</h4>
+                <p>I am a final-year PhD candidate at Virginia Tech, Blacksburg, advised by <a href="https://people.cs.vt.edu/~danfeng/" target="_blank"><strong>Dr. Daphne Yao</strong></a>, working at the intersection of <strong>security and generative AI</strong>. My research focuses on applying generative AI to improve real-world cybersecurity outcomes, spanning LLM safety, synthetic data generation, and adversarial ML. I build evaluation-driven systems that improve security robustness in practice and have published in <strong>IEEE S&amp;P, Asia CCS, and ACSAC</strong>. My work includes hands-on experience with LLMs, GANs, and diffusion models for security-specific data generation and for mitigating toxicity in chatbot customization pipelines.</p>
+                <p>I am currently seeking <strong>industry research</strong> or <strong>postdoctoral</strong> roles starting in Summer 2026 and welcome inquiries via email.</p>
+
                 <!-- <p><b>I plan to spend Summer 2025 working on impactful research at the intersection of Security and Generative AI. If you have relevant opportunities, please reach out to me on LinkedIn or via email.</b></p> -->
             </div>
           </div>
         </div>
-        <div id="section1" class="container-fluid">
-          <h3 style="color: #000000;"> Updates</h3>
+        <div id="section1" class="container-fluid section-spacing">
+          <div id="updates"></div>
+          <h3 class="section-title">Updates</h3>
           <div class="panel panel-info" style="margin-right:20px">
             <div class="panel-body">
               <div class="row">
@@ -256,14 +404,18 @@
                   <!-- <ul> -->
                     <!-- NEW UPDATE START -->
                     <div>
+                      <em>Nov 2025: </em> Received the <strong>Top Technical Presentation Award</strong> at the <strong>CCI SWVA Graduate Student Summit</strong> for the talk <strong>“When Agents Test Code: Generative AI for Software Security.”</strong>
+                    </div>
+                    <div>
+                      <em>Nov 2025: </em> Our paper <a href="https://arxiv.org/abs/2507.06092" target="_blank"><strong>“Taming Data Challenges in ML-based Security Tasks”</strong></a> was accepted to <a href="https://asiaccs2026.cse.iitkgp.ac.in/home/" target="_blank"><strong>AsiaCCS 2026</strong></a>, one of only 74 papers accepted in cycle 1.
+                    </div>
+                    <div>
                       <em>July 2025: </em>
-                      Check out our two new arXiv preprints:<br>
-                      <b>1. <a href="https://arxiv.org/abs/2507.06092" target="_blank">
-                        "Taming Data Challenges in ML-based Security Tasks: Lessons from Integrating Generative AI"
-                      </a></b><br>
-                      <b>2. <a href="https://arxiv.org/abs/2507.05660" target="_blank">
-                        "TuneShield: Mitigating Toxicity in Conversational AI while Fine-tuning on Untrusted Data"
-                      </a></b>
+                      Check out our two new arXiv preprints:
+                      <ul>
+                        <li><a href="https://arxiv.org/abs/2507.06092" target="_blank">“Taming Data Challenges in ML-based Security Tasks: Lessons from Integrating Generative AI”</a></li>
+                        <li><a href="https://arxiv.org/abs/2507.05660" target="_blank">“TuneShield: Mitigating Toxicity in Conversational AI while Fine-tuning on Untrusted Data”</a></li>
+                      </ul>
                     </div>
                     <div>
                       <em>Apr 2025: </em> I am now a <b>PhD candidate!</b>
@@ -276,13 +428,13 @@
                       <div><em>Apr 2024: </em>Won and received the <b>IEEE S&P Student Travel Grant 2024</b>. </div>
                     <!-- </li> -->
                   <!-- <li> -->
-                   <div><em>Mar 2024: </em>Presented a poster on <i>First Look at Toxicity Injection Attacks on Open-domain Chatbots.</i> at DMV Security Workshop 2024.</div>
+                   <div><em>Mar 2024: </em>Presented a poster on <b>“First Look at Toxicity Injection Attacks on Open-domain Chatbots.”</b> at DMV Security Workshop 2024.</div>
                  <!-- </li> -->
                  <!-- <li> -->
                   <div><em>Dec 2023: </em> Pleasure to have attended <b>ACSAC 2023</b> as a coauthor of our paper on Data poisoning attacks in Dialogue based Learning (DBL) systems.</div>
                 <!-- </li> -->
                 <!-- <li> -->
-                 <div><em>Oct 2023: </em>Presented on <i>Using GenAI to strengthen security defenses</i> at <b>VT Fall 2023 Skillshop Series</b> - Leveraging Creative Technologies.</div>
+                 <div><em>Oct 2023: </em>Presented on <b>“Using GenAI to strengthen security defenses”</b> at <b>VT Fall 2023 Skillshop Series</b> - Leveraging Creative Technologies.</div>
                <!-- </li> -->
                      <!-- <li> -->
                       <div><em>Oct 2023: </em>Our research got featured in VPM News Focal Point - <a href="https://www.pbs.org/video/artificial-intelligence-what-are-the-risks-and-benefits-kaz2/"><b> “Artificial intelligence: What are the risks and benefits?”</a></b></div>
@@ -293,8 +445,76 @@
             </div>
           </div>
         </div>
-        <div id="section2" class="container-fluid">
-          <h3 style="color: #000000;"><i class="fa-solid fa-book"></i> Publications</h3>
+        <div id="research" class="container-fluid section-spacing">
+          <h3 class="section-title">Research</h3>
+          <div class="panel panel-info" style="margin-right:20px">
+            <div class="panel-body">
+              <h4>Research Themes</h4>
+              <ul>
+                <li>Synthetic data pipelines for robust security ML under data scarcity or sensitivity.</li>
+                <li>LLM safety and toxicity mitigation for real-world conversational deployments.</li>
+                <li>Automated and adversarial security testing frameworks for evolving software and ML threats.</li>
+                <li>Evaluation pipelines emphasizing measurable security outcomes at deployment scale.</li>
+              </ul>
+              <h4>Representative Projects</h4>
+              <div class="project-block project">
+                <h5 class="project-title"><a href="https://arxiv.org/abs/2507.06092" target="_blank">Improving Security ML Under Data Scarcity Using Generative AI</a> <span class="meta">(AsiaCCS 2026)</span></h5>
+                <p class="project-line"><span class="project-label">Problem:</span> Security ML classifiers are often limited by data scarcity and imbalance, rather than algorithmic design.</p>
+                <p class="project-line"><span class="project-label">Approach:</span> Applied <strong>Generative AI-based synthetic data augmentation</strong> to improve classifier generalization. Evaluated multiple state-of-the-art GenAI methods and introduced Nimai, a controlled synthetic data generation scheme for security tasks.</p>
+                <p class="project-line"><span class="project-label">Evaluation:</span> Conducted empirical evaluation across 7 diverse security tasks, including severely low-data settings.</p>
+                <p class="project-line"><span class="project-label">Outcome:</span> Achieved up to 32.6% performance improvement in security classifiers.</p>
+              </div>
+              <div class="project-block project">
+                <h5 class="project-title"><a href="https://arxiv.org/abs/2507.05660" target="_blank">Reducing Toxicity in LLM Fine-tuning Pipelines</a> <span class="meta">(arXiv 2025)</span></h5>
+                <p class="project-line"><span class="project-label">Problem:</span> Fine-tuning LLMs on untrusted conversational data can introduce toxic or unsafe behavior.</p>
+                <p class="project-line"><span class="project-label">Approach:</span> Developed TuneShield, a defense framework for safe fine-tuning of <strong>LLaMA-based chat models</strong>, combining LLM-based toxicity detection, targeted synthetic data generation ("healing data"), and <strong>alignment using PEFT-based Direct Preference Optimization (DPO)</strong>.</p>
+                <p class="project-line"><span class="project-label">Evaluation:</span> Evaluated against toxicity injection, adaptive adversarial, and jailbreak attacks during conversational fine-tuning.</p>
+                <p class="project-line"><span class="project-label">Outcome:</span> Reduced toxic outputs to near-zero levels while preserving conversational quality.</p>
+              </div>
+              <div class="project-block project">
+                <h5 class="project-title">Agent-based Automation for Security Test Generation <span class="meta">(Ongoing)</span></h5>
+                <p class="project-line"><span class="project-label">Problem:</span> Manual vulnerability testing for third-party libraries does not scale for software supply-chain security.</p>
+                <p class="project-line"><span class="project-label">Approach:</span> Built a <strong>self-correcting multi-agent LLM system</strong> for automated JUnit security test generation and execution.</p>
+                <p class="project-line"><span class="project-label">Evaluation:</span> Evaluated across 50 Java client codebases, using LLM-based validation to determine whether generated tests successfully trigger known vulnerabilities.</p>
+                <p class="project-line"><span class="project-label">Outcome:</span> Achieved automated end-to-end vulnerability test generation and validation using self-correcting LLM agents.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="section6" class="container-fluid section-spacing">
+          <h3 class="section-title"><i class="fa-solid fa-building"></i> Experience</h3>
+          <div class="panel panel-info" style="margin-right:20px; text-align: justify;">
+            <div class="panel-body">
+              <!-- Section: Timeline -->
+              <section class="py-5">
+                <!-- <ul> -->
+                  <!-- <li class="timeline-item mb-5"> -->
+                    <h4>Virginia Polytechnic Institute And State University</h4>
+                    <p>Graduate Research Assistant</p>
+                    <ul>
+                      <li>Built evaluation-driven AI security systems spanning LLM safety and alignment, synthetic data generation, and adversarial ML, with publications at IEEE S&amp;P, Asia CCS, and ACSAC.</li>
+                      <li>Designed alignment-aware fine-tuning pipelines for LLaMA-based models using PEFT and Direct Preference Optimization (DPO) to mitigate toxicity injection and preserve conversational quality.</li>
+                      <li>Developed multi-agent LLM systems that generate, execute, and self-correct JUnit security tests, enabling automated vulnerability validation across 50 Java client codebases in software supply-chain security.</li>
+                      <li>Created controlled synthetic data generation frameworks that improved ML-based security classifiers by up to 32.6% under severe data scarcity.</li>
+                    </ul>
+
+                    <h4>JP Morgan Chase &amp; IIIT Hyderabad</h4>
+                    <p>Applied Research Collaboration</p>
+                    <ul>
+                      <li>Developed the first named-entity-labeled corpus for SEBI regulations, covering 7,500+ sub-regulations and defining 7 domain-specific entity types for financial compliance analysis.</li>
+                      <li>Built an overlapping Named Entity Recognition system achieving 87.47% precision, enabling large-scale regulatory text understanding for governance and compliance workflows.</li>
+                    </ul>
+                    <!-- </li> -->
+                <!-- </ul> -->
+              </section>
+              <!-- Section: Timeline -->
+            </div>
+          </div>
+        </div>
+
+        <div id="section2" class="container-fluid section-spacing">
+          <div id="publications"></div>
+          <h3 class="section-title"><i class="fa-solid fa-book"></i> Publications</h3>
           <div class="panel panel-info" style="margin-right:20px">
             <div class="panel-body">
               <div class="row">
@@ -304,15 +524,18 @@
                       <!-- <li> -->
                         <div>
                           <strong>Taming Data Challenges in ML-based Security Tasks: Lessons from Integrating Generative AI</strong>
-                          <br><b>Shravya Kanchi</b>,  Neal Mangaokar, Aravind Cheruvu, Sifat Muhammad Abdullah, Shirin Nilizadeh, Atul Prakash, Bimal Viswanath <br>arXiv preprint, July 2025.<br>
+                          <br><b>Shravya Kanchi</b>,  Neal Mangaokar, Aravind Cheruvu, Sifat Muhammad Abdullah, Shirin Nilizadeh, Atul Prakash, Bimal Viswanath <br>ACM AsiaCCS 2026, Bangalore, India, 2026.<br>
                           <a href="https://arxiv.org/abs/2507.06092" target="_blank">
                             <span class="label label-default">PDF</span>
+                          </a>
+                          <a href="https://github.com/secml-lab-vt/taming-data-challenges-security-ml/" target="_blank">
+                            <span class="label label-default">Code and dataset</span>
                           </a>
                         </div>
                         <br>
                         <div>
                           <strong>TuneShield: Mitigating Toxicity in Conversational AI while Fine-tuning on Untrusted Data</strong>
-                          <br> Aravind Cheruvu, <b>Shravya Kanchi</b>, Sifat Muhammad Abdullah, Nicholas Kong, Daphne Yao, Murtuza Jadliwala, Bimal Viswanath <br>arXiv preprint, July 2025.<br>
+                          <br> Aravind Cheruvu*, <b>Shravya Kanchi</b>*, Sifat Muhammad Abdullah, Nicholas Kong, Daphne Yao, Murtuza Jadliwala, Bimal Viswanath <br>arXiv preprint, July 2025.<br>
                           <a href="https://arxiv.org/abs/2507.05660" target="_blank">
                             <span class="label label-default">PDF</span>
                           </a>
@@ -383,53 +606,71 @@
             </div>
           </div>
         </div>
-        <div id="section3" class="container-fluid">
-          <h3 style="color: #000000;"><i class="fa-solid fa-school"></i> Education</h3>
+        <div id="section5" class="container-fluid section-spacing">
+          <h3 class="section-title"><i class="fa fa-cogs" aria-hidden="true"></i>
+ Skills</h3>
+          <div class="panel panel-info" style="margin-right:20px">
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-md-12">
+                  <p class="skills-title"><strong>AI Security &amp; Generative AI</strong></p>
+                  <p>AI Security, LLM Safety &amp; Alignment, Generative AI, Adversarial Machine Learning, Security Evaluation &amp; Benchmarking</p>
+
+                  <p class="skills-title"><strong>Model Fine-Tuning &amp; Alignment</strong></p>
+                  <p>Direct Preference Optimization (DPO), PEFT (LoRA), Supervised Fine-Tuning (SFT), Instruction Tuning, Prompt Engineering</p>
+
+                  <p class="skills-title"><strong>Synthetic Data &amp; Robustness</strong></p>
+                  <p>Synthetic Data Generation, Tabular Data Augmentation, Concept Drift, Robustness Analysis, Data Poisoning &amp; Toxicity Injection</p>
+
+                  <p class="skills-title"><strong>Agent-Based Systems</strong></p>
+                  <p>LLM Agents, Multi-Agent Systems, Self-Correcting Agents, Automated Security Test Generation, Agentic Reasoning</p>
+
+                  <p class="skills-title"><strong>Security Domains</strong></p>
+                  <p>Malware &amp; Phishing Detection, Malicious URL Detection, Network Intrusion Detection (IDS), Software Supply-Chain Security, Access Control Systems</p>
+
+                  <p class="skills-title"><strong>ML Frameworks &amp; Tooling</strong></p>
+                  <p>PyTorch, Hugging Face Transformers, LangChain, Evaluation Pipelines</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+<div id="section3" class="container-fluid section-spacing">
+          <h3 class="section-title"><i class="fa-solid fa-school"></i> Education</h3>
           <div class="panel panel-info" style="margin-right:20px">
             <div class="panel-body">
               <!-- Section: Timeline -->
               <section class="py-5">
                 <ul class="timeline">
-                  <li class="timeline-item mb-5">
-                    <h4 class="fw-bold">Virginia Polytechnic Institute And State University (Virginia Tech)</h4>
-                    <p class="mb-2 fw-bold" style="color:#ab6f00">
-                      <b>Ph.D. in Computer Science</b>
-                    </p>
-                    <p class="mb-2 fw-bold">
-                      <b>Aug 2021 - Present</b>
-                    </p>
-                    <p>
-                      <b>CGPA: 3.76/4</b>
-                    </p>
+                  <li class="timeline-item education-item">
+                    <h4>Virginia Polytechnic Institute And State University (Virginia Tech)</h4>
+                    <div class="edu-row">
+                      <span class="edu-degree">Ph.D. in Computer Science</span>
+                      <span class="edu-years">Aug 2021 - Present</span>
+                    </div>
+                    <div class="edu-cgpa">GPA: 3.9/4</div>
                     <!-- <p>
                       <b>Graduate courses:</b> Data Analytics, Deep Learning, Hot Topics in Security and AI, Theory of Algorithms, Advanced Machine Learning, Security risks of Generative AI, Defenses Against ML Powered Adversaries
                     </p> -->
                   </li>
-                  <li class="timeline-item mb-5">
-                    <h4 class="fw-bold">International Institute of Information Technology (IIIT), Hyderabad</h4>
-                    <p class="mb-2 fw-bold" style="color:#007808">
-                      <b>Masters by Thesis in Computer Science</b>
-                    </p>
-                    <p class="mb-2 fw-bold">
-                      <b>Jul 2018 - May 2021</b>
-                      <p>
-                        <b>CGPA: 9/10 </b>
-                      </p>
-                    <!-- </p> <b>CGPA: </b>8.51/10.0 <b style="color:#ab6f00">"Gold Medal for best outgoing student from the Department of I.T."</b> -->
-                    </p>
+                  <li class="timeline-item education-item">
+                    <h4>International Institute of Information Technology (IIIT), Hyderabad</h4>
+                    <div class="edu-row">
+                      <span class="edu-degree">Masters by Thesis in Computer Science</span>
+                      <span class="edu-years">Jul 2018 - May 2021</span>
+                    </div>
+                    <div class="edu-cgpa">GPA: 9/10</div>
+                    <!-- <p>CGPA: 8.51/10.0 "Gold Medal for best outgoing student from the Department of I.T."</p> -->
                   </li>
-                  <li class="timeline-item mb-5">
-                    <h4 class="fw-bold">Indian Institute of Information Technology (IIIT), Sricity</h4>
-                    <p class="mb-2 fw-bold" style="color:#007808">
-                      <b>Bachelor of Technology (Honors) in Computer Science</b>
-                    </p>
-                    <p class="mb-2 fw-bold">
-                      <b>Jul 2014 - May 2018</b>
-                      <p>
-                        <b>CGPA: 8.79/10 </b>
-                      </p>
-                    <!-- </p> <b>CGPA: </b>8.51/10.0 <b style="color:#ab6f00">"Gold Medal for best outgoing student from the Department of I.T."</b> -->
-                    </p>
+                  <li class="timeline-item education-item">
+                    <h4>Indian Institute of Information Technology (IIIT), Sricity</h4>
+                    <div class="edu-row">
+                      <span class="edu-degree">Bachelor of Technology (Honors) in Computer Science</span>
+                      <span class="edu-years">Jul 2014 - May 2018</span>
+                    </div>
+                    <div class="edu-cgpa">GPA: 8.79/10</div>
+                    <!-- <p>CGPA: 8.51/10.0 "Gold Medal for best outgoing student from the Department of I.T."</p> -->
                   </li>
                 </ul>
               </section>
@@ -437,87 +678,20 @@
             </div>
           </div>
         </div>
-        <div id="section4" class="container-fluid">
-          <h3 style="color: #000000;"><i class="fa-solid fa-certificate"></i> Certifications</h3>
+        <div id="section4" class="container-fluid section-spacing">
+          <h3 class="section-title"><i class="fa-solid fa-certificate"></i> Certifications</h3>
           <div class="panel panel-info" style="margin-right:20px">
             <div class="panel-body">
               <div class="row">
                 <div class="col-md-12">
-                      <div>Qualified for and completed <strong><a href="http://copyx.org/">CopyrightX</a></strong>, a course on US Copyright Law, conducted each year jointly by the Harvard Law School & <strong>Berkman Klein Center for Internet and Society</strong>.</div>
-                  </ul>
+                      <div><strong><a href="https://ipxcourses.org/course-overview/" target="_blank">CopyrightX</a></strong> — US Copyright Law course jointly offered by Harvard Law School & <strong><a href="https://cyber.harvard.edu/" target="_blank">Berkman Klein Center for Internet and Society</a></strong>.</div>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <div id="section6" class="container-fluid">
-          <h3 style="color: #000000;"><i class="fa-solid fa-building"></i> Experience</h3>
-          <div class="panel panel-info" style="margin-right:20px; text-align: justify;">
-            <div class="panel-body">
-              <!-- Section: Timeline -->
-              <section class="py-5">
-                <!-- <ul> -->
-                  <!-- <li class="timeline-item mb-5"> -->
-                    <h4 class="fw-bold">Graduate Research Assistant</h4>
-                    <p class="mb-2 fw-bold" style="color:#ab6f00">
-                      <b>IIIT Hyderabad & JP Morgan and Chase Research</b>
-                    </p>
-                    <p class="mb-2 fw-bold">
-                      <b>Jan 2021 - Jun 2021</b>
-                    </p>
-                    <p>Developed the first named-entity labeled corpus tailored to SEBI regulations, encompassing 7,500 sub-regulations. Introduced 7 unique entity types specific to the Indian securities regulatory framework and created an Overlapping Named Entity Recognition tool with a precision of 87.47%.</p>
-                    <p class="mb-2 fw-bold" style="color:#ab6f00">
-                      <!-- <b>Consultant</b> -->
-                    </p>
-                    <!-- </li> -->
-                <!-- </ul> -->
-              </section>
-              <!-- Section: Timeline -->
-            </div>
-          </div>
-        </div>
-
-        <div id="section5" class="container-fluid">
-          <h3 style="color: #000000;"><i class="fa fa-cogs" aria-hidden="true"></i>
- Skills</h3>
-          <div class="panel panel-info" style="margin-right:20px">
-            <div class="panel-body">
-              <div class="row">
-                <div class="col-md-12">
-                  <!-- <ul> -->
-                    <p>
-                      <b>GenAI expertise:</b> LLMs (LLAMA2, FALCON, Vicuna, FLAN, OPT), Model customization (standard fine-tuning, LoRA fine-tuning), Safety alignment (Supervised fine-tuning, Direct preference optimization), Adversarial attacks, Hyper-parameter search, Prompt Engineering, AutoML
-                    </p>
-                    <!-- <li>
-                      <b>CV-GenAI expertise:</b> Stable Diffusion, StyleGAN, Deepfake generation and detection, Adversarial attacks
-                    </li> -->
-                    <p>
-                      <b>Security expertise:</b> ML-based malware detection, Phishing, Spam, Network IDS, concept drift, BGP, website privacy, access control system, malicious URL detection
-                    </p>
-                    <p>
-                      <b>Machine Learning libraries:</b> Huggingface, Transformers,Tokenizers, PyTorch, Numpy, Scikit-Learn, Pandas, SpaCY, RayTune, LightGBM, AutoGluon
-                    </p>
-                    <p>
-                      <b>Programming Languages:</b> Python, C, C++, HTML/CSS
-                    </p>
-                    <p>
-                      <b>Developer Tools:</b> SQL Developer, VS Code, Weka, label-studio, SPSS, Nmap, Docker, Jupyter Notebook, Git, Linux, Vim
-                    </p>
-                    <!-- <li>
-                      <b>Technologies/Frameworks:</b> Linux, GitHub, Java Swing, AWT
-                    </li> -->
-                    <!-- <li>
-                      <b>Oracle Tools/Software:</b> Oracle SQL, Oracle HCM Cloud HR And Payroll Module, Payroll Parallel/Reconciliation Tool (Data Analysis), HCM Extracts, Oracle BI Reports, Fast Formulas
-                    </li> -->
-                  <!-- </ul> -->
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-<!--         <div id="section7" class="container-fluid">
+                <!--         <div id="section7" class="container-fluid">
           <h3 style="color: #ffffff;"><i class="fa-solid fa-video"></i> Videos</h3>
           <div id="videoCarousel" class="carousel slide">
             <ol class="carousel-indicators">
